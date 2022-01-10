@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 900;
+    line-height: 35px;
+    color: #19ff81;
+}
+
+.nav-top {
+    width: 80%;
+    padding-top: 1rem;
+    margin: auto;
+    display: flex;
+}
+
+.nav-bottom {
+    width: 80%;
+    height: 10px;
+    display: flex;
+    margin: auto;
+    border-left: 3px solid #19ff81;
+    border-right: 3px solid #19ff81;
+}
+
+.nav-empty {
+    border-bottom: 3px solid #19ff81;
+    flex: auto;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    line-height: 36px;
+}
+
+.colleft {
+    padding-left: 10px;
+    width: 8px;
+    border-left: 3px solid #19ff81;
+    border-top: 3px solid #19ff81;
+}
+
+.colright {
+    padding-right: 10px;
+    width: 8px;
+    border-right: 3px solid #19ff81;
+    border-top: 3px solid #19ff81;
+}
+
+.colmid {
+    width: 15px;
+    border-bottom: 3px solid #19ff81;
+}
+
+.col {
+    text-decoration: none;
+    display: flex;
+}
+
+.col:not(.active) {
+    border-bottom: 3px solid #19ff81;
+    color: #19ff81;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+}
+
+.active {
+    color: #19ff81;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 36px;
+}
+
+.colunactive {
+    width: 8px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+.colspacing {
+    width: 20px;
+    border-bottom: 3px solid #19ff81;
+}
+
+@media screen and (max-width: 920px) {
+
+    .col:not(.active) {
+        font-size: 20px;
+    }
+
+    .active {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 593px) {
+    .col:not(.active) {
+        font-size: 11px;
+    }
+
+    .active {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .home-img {
+        width: 100%;
+    }
+}
+
+.colspacing:last-child {
+    display: none;
+}

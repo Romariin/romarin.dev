@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --value: 0;
+}
+
+
+/* ¯\_(ツ)_/¯  Je sais pas pourquoi il claque une erreur "Unknown at-rule" ici, mais ça fonctionne.*/
+@property --pgPercentage {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@keyframes growProgressBar {
+    0%,
+    33% {
+        --pgPercentage: 0;
+    }
+    100% {
+        --pgPercentage: var(--value);
+    }
+}
+
+div[role="progressbar"] {
+    --size: 12rem;
+    --fg: #19ff81;
+    --bg: rgba(17, 88, 30, 0.76);
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(closest-side, #11581e 85%, transparent 0), conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    /*color: var(--fg);*/
+}
+
+div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+}
+
+div[role="progressbar"] img {
+    width: 5rem;
+    opacity: 65%;
+}
+
+.compTech-container {
+    width: 80%;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.compTech-container .compTech-circle-placement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.compTech-container h1 {
+    padding-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    color: #19FF81;
+}
+
+.compTech-container p {
+    padding-top: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    color: #19FF81;
+}
+
+@media screen and (max-width: 1220px) {
+    div[role="progressbar"] {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    div[role="progressbar"] img {
+        width: 5rem;
+    }
+
+    .compTech-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        /*align-content: center;*/
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .compTech-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .compTech-container {
+        width: unset;
+        grid-gap: 1rem;
+
+    }
+    div[role="progressbar"] {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    div[role="progressbar"] img {
+        width: 3rem;
+    }
+}

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-image: radial-gradient(#11581e, #041607);
+    background-size: auto 4px;
+    color: #19ff81;
+}
+
+.navbar-component {
+    padding-top: 25px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

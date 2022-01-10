@@ -1,0 +1,18 @@
+.footer-bottom {
+    width: 80%;
+    border-top: 3px solid #19ff81;
+    margin: auto;
+}
+
+.footer-top {
+    width: 80%;
+    height: 10px;
+    border-left: 3px solid #19ff81;
+    border-right: 3px solid #19ff81;
+    margin: auto;
+}
+
+.footer-bar {
+    width: 100%;
+    padding-bottom: 1rem;
+}

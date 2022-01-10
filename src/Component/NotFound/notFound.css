@@ -1,0 +1,48 @@
+.div-nf {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-404 {
+    display: flex;
+    opacity: 0.5;
+}
+
+.title-404 {
+    font-size: 50px;
+}
+
+.link-404 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.div-404 {
+    font-family: Montserrat, sans-serif;
+}
+
+.div-404 h1 {
+    font-size: 4rem;
+}
+.div-404 span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.div-404 a {
+    text-decoration: none !important;
+    border: none
+}
+
+.div-404 i {
+    margin-right: 5px;
+}
